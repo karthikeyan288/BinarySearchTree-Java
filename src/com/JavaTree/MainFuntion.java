@@ -21,7 +21,7 @@ public class MainFuntion {
 		binaryTree.add(67);
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter your choice 1-> inOrder " + "2-> postOrder" + "3-> preOrder");
+		System.out.println("Enter your choice 1-> inOrder 2-> postOrder 3-> preOrder 4-> search");
 		int choice = sc.nextInt();
 		switch (choice) {
 		case 1:
@@ -32,7 +32,12 @@ public class MainFuntion {
 			break;
 		case 3:
 			binaryTree.preOrder();
-
+      break;
+		case 4:
+			System.out.println("Enter a value for searching ");
+			int element =sc.nextInt();
+			System.out.println(binaryTree.search(element));
+			break;
 		default:
 			break;
 		}
