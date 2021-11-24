@@ -24,6 +24,7 @@ public class BinaryTree<K extends Comparable<K>> {
 	public void inOrder() {
 		inOrderRec(this.root);
 	}
+
 	private void inOrderRec(MyBinaryNode<K> root) {
 		
 		if(root != null) {
