@@ -9,7 +9,7 @@ public class BinaryTree<K extends Comparable<K>> {
 
 	private MyBinaryNode<K> addRecursive(MyBinaryNode<K> root, K key) {
 
-		if (root == null) {
+    if (root == null) {
 			return new MyBinaryNode<>(key);
 		}
 		int comRes = key.compareTo(root.key);
@@ -29,20 +29,20 @@ public class BinaryTree<K extends Comparable<K>> {
 
 	private void inOrderRec(MyBinaryNode<K> root) {
 
-		if (root != null) {
+    if(root != null) {
 			inOrderRec(root.left);
 			System.out.println(root.key);
 			inOrderRec(root.right);
 		}
-	}
+  }
 
 	public void preOrder() {
 		preOrderRec(this.root);
 	}
-
+  
 	private void preOrderRec(MyBinaryNode<K> root) {
-
-		if (root != null) {
+		
+		if(root != null) {
 			System.out.println(root.key);
 			preOrderRec(root.left);
 			preOrderRec(root.right);
@@ -52,10 +52,10 @@ public class BinaryTree<K extends Comparable<K>> {
 	public void postOrder() {
 		postOrderRec(this.root);
 	}
-
+	
 	private void postOrderRec(MyBinaryNode<K> root) {
-
-		if (root != null) {
+		
+		if(root != null) {
 			postOrderRec(root.left);
 			postOrderRec(root.right);
 			System.out.println(root.key);
@@ -81,4 +81,6 @@ public class BinaryTree<K extends Comparable<K>> {
 		}
 		return false;
 	}
+ }
 }
+
